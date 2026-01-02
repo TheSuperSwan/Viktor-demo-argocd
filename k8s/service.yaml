@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service                                                             
+metadata:                                                                 
+  name: viktor-demo-argocd
+  labels:
+    app: viktor-demo-argocd
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 5000
+    protocol: TCP
+  selector:
+    app: viktor-demo-argocd

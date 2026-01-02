@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1                                         
+kind: Route                                                               
+metadata:                                                                 
+  name: viktor-demo-argocd                                                        
+  labels:                                                                 
+    app: viktor-demo-argocd                                                      
+spec:                                                                     
+  to:                                                                     
+    kind: Service                                                         
+    name: viktor-demo-argocd                                                     
+    weight: 100
